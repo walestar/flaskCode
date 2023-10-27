@@ -9,13 +9,13 @@ def jwt_authenticate(username, password):
     return create_access_token(identity=username)
   return None
 
-def login(studentID, password):
+def student_login(studentID, password):
     user = User.query.filter_by(studentId=studentID).first()
     if user and user.check_password(password):
         return user
     return None
 
-def login(staffID, password):
+def staff_login(staffID, password):
     user = User.query.filter_by(staffId=staffID).first()
     if user and user.check_password(password):
         return user
