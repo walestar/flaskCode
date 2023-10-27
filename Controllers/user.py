@@ -16,7 +16,7 @@ def create_staff(staffID, password):
 def get_student_by_studentID(studentID):
     return User.query.filter_by(studentID=studentID).first()
 
-def get_student_by_studentID(studentID):
+def get_staff_by_stafftID(staffID):
     return User.query.filter_by(staffID=staffID).first()
 
 def get_all_users():
